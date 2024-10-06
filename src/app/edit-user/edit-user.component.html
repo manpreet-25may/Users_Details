@@ -1,0 +1,21 @@
+<div class="edit">
+  <!-- <h1>{{message}}</h1> -->
+  <form [formGroup]="editUser" (ngSubmit)="UpdateData()">
+    <div class="mb-3">
+      <label for="first_name">First Name</label>
+      <input name="first_name"  type="text" [(ngModel)]="user.data.first_name" class="form-control" id="first_name"
+        formControlName="first_name">
+    </div>
+    <div class="mb-3">
+      <label for="last_name" class="form-label">Last Name</label>
+      <input name="last_name" type="text" [(ngModel)]="user.data.last_name" class="form-control" id="last_name" formControlName="last_name">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input name="email" type="email" [(ngModel)]="user.data.email" class="form-control" id="email" formControlName="email">
+    </div>
+    <!-- <a routerLink="/Home" class="btn btn-primary">Submit</a> -->
+    <button class="btn btn-primary" style="margin:5px;" type="submit">Submit</button>
+    <button routerLink="/Home" class="btn btn-primary" style="margin:5px;" type="button">Back</button>
+  </form>
+</div>

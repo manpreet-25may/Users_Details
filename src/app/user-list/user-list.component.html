@@ -1,0 +1,21 @@
+<div class="user">
+  <table class="table table-sm">
+    <td>ID</td>
+    <td>Email</td>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Photo</td>
+    <td></td>
+    <td>Action</td>
+    <tr *ngFor="let x of data.data">
+      <td>{{x.id}}</td>
+      <td>{{x.email}}</td>
+      <td>{{x.first_name}}</td>
+      <td>{{x.last_name}}</td>
+      <td><img src="{{x.avatar}}"></td>
+      <td><button (click)="edit(x)" class="btn btn-primary">Edit</button></td>
+      <!-- <td><button routerLink="/Edit/{{x.id}}" class="btn btn-primary">Edit</button></td> -->
+      <td><button (click)="deleteUser(x)" class="btn btn-danger">Delete</button></td>
+    </tr>
+  </table>
+</div>
